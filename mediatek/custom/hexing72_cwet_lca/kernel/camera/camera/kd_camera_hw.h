@@ -1,0 +1,23 @@
+#ifndef _KD_CAMERA_HW_H_
+#define _KD_CAMERA_HW_H_
+ 
+
+#include <mach/mt_gpio.h>
+#include <mach/mt_pm_ldo.h>
+#include "pmic_drv.h"
+#include "cust_gpio_usage.h"
+
+
+#define PMIC_APP_MEMORY_CARD_VDD         MT6323_POWER_LDO_VMCH
+#define PMIC_APP_CAP_TOUCH_VDD         MT6323_POWER_LDO_VGP2
+#define PMIC_APP_MAIN_CAMERA_POWER_AF         MT6323_POWER_LDO_VCAM_AF
+#define PMIC_APP_MAIN_CAMERA_POWER_D         MT6323_POWER_LDO_VCAMD
+#define PMIC_APP_SUB_CAMERA_POWER_D         MT6323_POWER_LDO_VCAMD
+#define PMIC_APP_MAIN_CAMERA_POWER_IO         MT6323_POWER_LDO_VCAM_IO
+#define PMIC_APP_SUB_CAMERA_POWER_IO         MT6323_POWER_LDO_VCAM_IO
+#define PMIC_APP_MAIN_CAMERA_POWER_A         MT6323_POWER_LDO_VCAMA
+#define PMIC_APP_SUB_CAMERA_POWER_A         MT6323_POWER_LDO_VCAMA
+
+
+
+#endif 

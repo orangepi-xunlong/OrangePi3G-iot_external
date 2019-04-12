@@ -1,0 +1,15 @@
+快速转动到底，206度：
+sys/class/stepmotor/lv8413gp/quick
+11 > quick   ###正转206度
+22 > quick   ###反转206度
+
+慢速转动，角度依据上层给的数目：
+正转：
+sys/class/stepmotor/lv8413gp/cw_slow
+nums > quick
+反转：
+sys/class/stepmotor/lv8413gp/cw_slow
+nums > quick
+
+eg:如果需要慢速转动30度
+nums = 30x47/9

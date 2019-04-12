@@ -1,0 +1,274 @@
+############################################################################################################
+#
+#  General Setting 
+#    
+############################################################################################################
+- general: MTK_PLATFORM_CFG
+  info: 
+    - config_version: V1.1.1
+      platform: MT6572
+      project: hexing72_cwet_lca
+      storage: NAND
+      boot_channel: NONE
+      block_size: 0x40000
+############################################################################################################
+#
+#  Layout Setting
+#
+############################################################################################################
+- partition_index: SYS0
+  partition_name: PRELOADER
+  file_name: preloader_hexing72_cwet_lca.bin
+  is_download: true
+  type: SV5_BL_BIN
+  linear_start_addr: 0x0
+  physical_start_addr: 0x0
+  partition_size: 0x100000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: BOOTLOADERS
+  reserve: 0x00
+
+- partition_index: SYS1
+  partition_name: PRO_INFO
+  file_name: NONE
+  is_download: false
+  type: NONE
+  linear_start_addr: 0x100000
+  physical_start_addr: 0x0
+  partition_size: 0x100000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: PROTECTED
+  reserve: 0x00
+
+- partition_index: SYS2
+  partition_name: NVRAM
+  file_name: NONE
+  is_download: false
+  type: NONE
+  linear_start_addr: 0x200000
+  physical_start_addr: 0x0
+  partition_size: 0x300000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: BINREGION
+  reserve: 0x00
+
+- partition_index: SYS3
+  partition_name: PROTECT_F
+  file_name: NONE
+  is_download: false
+  type: NONE
+  linear_start_addr: 0x500000
+  physical_start_addr: 0x0
+  partition_size: 0x300000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: PROTECTED
+  reserve: 0x00
+
+- partition_index: SYS4
+  partition_name: PROTECT_S
+  file_name: NONE
+  is_download: false
+  type: NONE
+  linear_start_addr: 0x800000
+  physical_start_addr: 0x0
+  partition_size: 0x300000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: PROTECTED
+  reserve: 0x00
+
+- partition_index: SYS5
+  partition_name: SECCFG
+  file_name: NONE
+  is_download: false
+  type: NONE
+  linear_start_addr: 0xb00000
+  physical_start_addr: 0x0
+  partition_size: 0x40000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: INVISIBLE
+  reserve: 0x00
+
+- partition_index: SYS6
+  partition_name: UBOOT
+  file_name: lk.bin
+  is_download: true
+  type: NORMAL_ROM
+  linear_start_addr: 0xb40000
+  physical_start_addr: 0x0
+  partition_size: 0x80000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: UPDATE
+  reserve: 0x00
+
+- partition_index: SYS7
+  partition_name: BOOTIMG
+  file_name: boot.img
+  is_download: true
+  type: NORMAL_ROM
+  linear_start_addr: 0xbc0000
+  physical_start_addr: 0x0
+  partition_size: 0x600000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: UPDATE
+  reserve: 0x00
+
+- partition_index: SYS8
+  partition_name: RECOVERY
+  file_name: recovery.img
+  is_download: false
+  type: NORMAL_ROM
+  linear_start_addr: 0x11c0000
+  physical_start_addr: 0x0
+  partition_size: 0x600000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: UPDATE
+  reserve: 0x00
+
+- partition_index: SYS9
+  partition_name: SEC_RO
+  file_name: secro.img
+  is_download: false
+  type: NORMAL_ROM
+  linear_start_addr: 0x17c0000
+  physical_start_addr: 0x0
+  partition_size: 0x40000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: UPDATE
+  reserve: 0x00
+
+- partition_index: SYS10
+  partition_name: MISC
+  file_name: NONE
+  is_download: false
+  type: NONE
+  linear_start_addr: 0x1800000
+  physical_start_addr: 0x0
+  partition_size: 0xc0000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: INVISIBLE
+  reserve: 0x00
+
+- partition_index: SYS11
+  partition_name: LOGO
+  file_name: logo.bin
+  is_download: true
+  type: NORMAL_ROM
+  linear_start_addr: 0x18c0000
+  physical_start_addr: 0x0
+  partition_size: 0x100000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: UPDATE
+  reserve: 0x00
+
+- partition_index: SYS12
+  partition_name: EXPDB
+  file_name: NONE
+  is_download: false
+  type: NONE
+  linear_start_addr: 0x19c0000
+  physical_start_addr: 0x0
+  partition_size: 0x200000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: INVISIBLE
+  reserve: 0x00
+
+
+- partition_index: SYS14
+  partition_name: SYSTEM
+  file_name: rootfs.img
+  is_download: true
+  type: UBI_IMG
+  linear_start_addr: 0x1bc0000
+  physical_start_addr: 0x0
+  partition_size: 0x1cbc0000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: UPDATE
+  reserve: 0x00
+
+- partition_index: SYS15
+  partition_name: CACHE
+  file_name: cache.img
+  is_download: false
+  type: NONE
+  linear_start_addr: 0x1e780000
+  physical_start_addr: 0x0
+  partition_size: 0x700000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: INVISIBLE
+  reserve: 0x00
+
+- partition_index: SYS16
+  partition_name: USRDATA
+  file_name: userdata.img
+  is_download: false
+  type: UBI_IMG
+  linear_start_addr: 0x1ee80000
+  physical_start_addr: 0x0
+  partition_size: 0x0
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: true
+  is_reserved: false
+  operation_type: UPDATE
+  reserve: 0x00
+
+- partition_index: SYS17
+  partition_name: BMTPOOL
+  file_name: NONE
+  is_download: false
+  type: NONE
+  linear_start_addr: 0xFFFF0028
+  physical_start_addr: 0x0
+  partition_size: 0xa00000
+  region: NONE
+  storage: HW_STORAGE_NAND
+  boundary_check: false
+  is_reserved: true
+  operation_type: RESERVED
+  reserve: 0x00
+
