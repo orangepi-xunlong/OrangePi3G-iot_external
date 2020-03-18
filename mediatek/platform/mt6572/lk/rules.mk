@@ -14,11 +14,11 @@ ifeq ($(MTK_SECURITY_SW_SUPPORT), yes)
 	DEFINES += MTK_SECURITY_SW_SUPPORT
 endif	   
 
-$(info libshowlogo new path ------- $(LOCAL_DIR)/../../../../../bootloader/lk/lib/libshowlogo)
+$(info libshowlogo new path ------- $(LOCAL_DIR)/../../../../../uboot/lk/lib/libshowlogo)
 
 INCLUDES += -I$(LOCAL_DIR)/include \
 	    -I$(LOCAL_DIR)/include/platform \
-            -I$(LOCAL_DIR)/../../../../../bootloader/lk/lib/libshowlogo \
+            -I$(LOCAL_DIR)/../../../../../uboot/lk/lib/libshowlogo \
 	    -Iout/lk/include/target \
 	    -Iout/lk/lcm/inc \
 	    -Iout/lk/inc \
