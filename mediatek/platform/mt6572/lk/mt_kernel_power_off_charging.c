@@ -128,7 +128,11 @@ BOOL kernel_power_off_charging_detection(void)
     }
 
     if((upmu_is_chr_det() == KAL_TRUE)) {
+#if 0
         g_boot_mode = KERNEL_POWER_OFF_CHARGING_BOOT;
+#else
+	g_boot_mode = NORMAL_BOOT;
+#endif
 		return TRUE;
     }
 #ifdef RTC_2SEC_REBOOT_ENABLE
